@@ -4,8 +4,15 @@ params [
 	"_name"
 ];
 
-((animationNames _vehicle) select {
-	_x find _name != -1;
-}) apply {
-	_vehicle animationPhase _x;
-};
+private _phases = [];
+
+{
+	if (_x find _name != -1) then {
+		private _p = _vehicle animationPhase _x;
+
+		if (_p >= 0) then {
+			_phases pushBack _p;
+		};
+	};
+} forEach animationNames _vehicle;
+_phases;

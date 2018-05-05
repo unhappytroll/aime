@@ -1,11 +1,13 @@
+#include "..\macros.hpp"
+
 params [
 	"_unit",
 	"_vehicle"
 ];
 
 if (
-	(UAVControl getConnectedUAV _player) select 1 != ""
-	|| { _unit != effectiveCommander _vehicle }
+	!isMultiplayer && { _unit != effectiveCommander _vehicle }
+	|| { _unit call SFNC(operating_uav) }
 	|| { isTurnedOut _unit }
 ) exitWith { false };
 {

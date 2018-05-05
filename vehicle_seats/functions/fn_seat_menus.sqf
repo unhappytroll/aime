@@ -66,10 +66,10 @@ if (getNumber (_config >> "hasDriver") == 1 && { (driver _vehicle) call _allowed
 {
 	private _occupant = _x select 0;
 
+	if (_occupant == _player) exitWith { _cargo_i = nil };
 	if (_occupant call _allowed) then {
 		_cargo_i = _x select 2;
 	};
-	if (_occupant == _player) exitWith { _cargo_i = nil };
 	if (isNull _occupant) exitWith { nil };
 } forEach fullCrew [_vehicle, "cargo", true];
 if (!isNil "_cargo_i") then {

@@ -1,5 +1,9 @@
 #include "self_macros.hpp"
 
+class CfgFunctions {
+	#include "cfgfunctions.hpp"
+};
+
 class CfgPatches
 {
 	class PREFIX

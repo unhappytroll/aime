@@ -4,7 +4,7 @@ params [
 	"_unit",
 	"_weapon",
 	"_mag",
-	["_do_check", true, false]
+	["_do_check", true, [false]]
 ];
 
 private _state = weaponState _unit;

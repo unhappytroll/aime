@@ -4,7 +4,7 @@ class PREFIX {
 	class functions {
 		file = QUOT(FILE(functions));
 
-		class gear_phase {
+		class guess_phase {
 		};
 
 		class anim_phases {
@@ -35,6 +35,18 @@ class PREFIX {
 		};
 
 		class can_manual {
+		};
+
+		class flaps_down {
+		};
+
+		class init_flaps {
+		};
+
+		class init_user_actions {
+		};
+
+		class user_action_menus {
 		};
 	};
 };

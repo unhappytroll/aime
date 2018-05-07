@@ -11,7 +11,7 @@ params [
 private _old = _vehicle getVariable [QUOT(VAR(gear_status)), GEAR_UNKNOWN];
 
 if (_old == GEAR_UNKNOWN) then {
-	private _p = _vehicle call FNC(gear_phase);
+	private _p = [_vehicle, "gear"] call FNC(guess_phase);
 
 	_old = if (_p == 0) then { GEAR_DOWN }
 	else { if (_p < 1) then { GEAR_UNKNOWN } else { GEAR_UP } };

@@ -16,4 +16,8 @@
 #define GEAR_RETRACTING 4
 
 #define GEAR_UNKNOWN 5
+
+#define FLAPS_MAX 2
+
+#define VECTORING_MAX 6
 #endif

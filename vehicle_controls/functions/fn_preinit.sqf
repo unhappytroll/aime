@@ -42,3 +42,17 @@
 	CATEGORY,
 	true
 ] call CBA_Settings_fnc_init;
+[
+	QUOT(SETTING(flaps_action)),
+	"CHECKBOX",
+	"Enable flaps control",
+	CATEGORY,
+	true
+] call CBA_Settings_fnc_init;
+[
+	QUOT(SETTING(user_actions)),
+	"CHECKBOX",
+	"Enable additional toggles (Helicopter doors, ramp etc.)",
+	CATEGORY,
+	true
+] call CBA_Settings_fnc_init;

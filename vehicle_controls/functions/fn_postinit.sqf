@@ -78,7 +78,7 @@ call FNC(gear_init);
 		getText (configfile >> "CfgActions" >> "ManualFire" >> "text")
 	],
 	[
-		"\A3\ui_f\data\igui\cfg\actions\obsolete\ui_action_manualfire_ca.paa",
+		"\A3\ui_f\data\igui\cfg\actions\obsolete\ui_action_cancel_manualfire_ca.paa",
 		"\A3\ui_f\data\igui\cfg\actions\obsolete\ui_action_manualfire_ca.paa"
 	],
 	["LandVehicle", "Air", "Ship"]
@@ -101,3 +101,5 @@ call FNC(gear_init);
 	],
 	["LandVehicle", "Air", "Ship"]
 ] call FNC(toggle2_init);
+call FNC(init_flaps);
+call FNC(init_user_actions);

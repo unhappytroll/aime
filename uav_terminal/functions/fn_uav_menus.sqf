@@ -16,7 +16,7 @@ private _uav = getConnectedUAV _player;
 if (!(_controller isEqualTo _player)) exitWith { [] };
 
 private _config = configFile >> "CfgVehicles" >> typeOf _uav;
-private _has_driver = !isNull (_config >> "uavCameraGunnerPos");
+private _has_driver = !isNull (_config >> "uavCameraDriverPos");
 private _has_gunner = !isNull (_config >> "uavCameraGunnerPos");
 private _menus = [];
 

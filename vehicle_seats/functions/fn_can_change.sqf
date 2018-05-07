@@ -6,8 +6,7 @@ params [
 ];
 
 if (
-	!isMultiplayer && { _unit != effectiveCommander _vehicle }
-	|| { _unit call SFNC(operating_uav) }
+	(!isMultiplayer && { _unit != effectiveCommander _vehicle })
 	|| { isTurnedOut _unit }
 ) exitWith { false };
 {

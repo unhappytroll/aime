@@ -12,7 +12,10 @@ _change_ammo = [
 			"_args"
 		];
 
-		if (!SETTING(ammo_class)) exitWith { false };
+		if (
+			!SETTING(ammo_class)
+			|| { _player call SFNC(operating_uav) }
+		) exitWith { false };
 		_player == vehicle _player
 		|| { [_player, vehicle _player] call FNC(is_ffv) };
 	},

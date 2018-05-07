@@ -13,7 +13,8 @@ private _change_seat = [
 		];
 
 		SETTING(change_action)
-		&& { vehicle _player != _player };
+		&& { vehicle _player != _player }
+		&& { !(_player call SFNC(operating_uav)) };
 	},
 	FNC(change_menus),
 	true
